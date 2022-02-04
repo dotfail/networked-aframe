@@ -9,11 +9,11 @@ const easyrtc = require("open-easyrtc");      // EasyRTC external module
 process.title = "networked-aframe-server";
 
 // Get port or default to 8080
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 443;
 
 // Setup and configure Express http server.
 const app = express();
-app.use(express.static(path.resolve(__dirname, "..", "examples")));
+app.use(express.static(path.resolve(__dirname, "..", "vr")));
 
 // Serve the example and build the bundle in development.
 if (process.env.NODE_ENV === "development") {
